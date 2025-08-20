@@ -42,7 +42,7 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
       title,
       description,
       url: canonicalUrl,
-      siteName: 'Energy Nexus',
+      siteName: 'Finance Abu Daabi',
       images: [
         {
           url: ogImage,
@@ -77,7 +77,7 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
 export function generateHomeMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Energy Nexus - Latest Energy News, Articles & Insights',
+    'Finance Abu Daabi - Latest Energy News, Articles & Insights',
     'Stay updated with the latest energy news, articles, interviews, and insights from the energy industry. Discover renewable energy trends, sustainability news, and expert analysis.',
     '/'
   )
@@ -86,7 +86,7 @@ export function generateHomeMetadata(): Metadata {
 export function generateArticlesMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Articles - Energy Nexus',
+    'Articles - Finance Abu Daabi',
     'Explore our comprehensive collection of energy articles covering renewable energy, sustainability, industry trends, and expert insights.',
     '/articles'
   )
@@ -95,7 +95,7 @@ export function generateArticlesMetadata(seo?: SEOData): Metadata {
 export function generateArticleMetadata(article: any): Metadata {
   const seo = article.seo || {}
   const title = seo.title || article.title
-  const description = seo.description || article.dek || `Read about ${article.title} on Energy Nexus.`
+  const description = seo.description || article.dek || `Read about ${article.title} on Finance Abu Daabi.`
   const url = article.slug?.current ? `/articles/${article.slug.current}` : '/articles'
 
   return generateMetadata(
@@ -109,7 +109,7 @@ export function generateArticleMetadata(article: any): Metadata {
 export function generateInterviewsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Interviews - Energy Nexus',
+    'Interviews - Finance Abu Daabi',
     'Discover exclusive interviews with energy industry leaders, experts, and innovators. Get insights from the people shaping the future of energy.',
     '/interviews'
   )
@@ -132,7 +132,7 @@ export function generateInterviewMetadata(interview: any): Metadata {
 export function generateEventsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Events - Energy Nexus',
+    'Events - Finance Abu Daabi',
     'Stay informed about upcoming energy events, conferences, summits, and industry gatherings. Find events in your region and sector.',
     '/events'
   )
@@ -155,7 +155,7 @@ export function generateEventMetadata(event: any): Metadata {
 export function generatePublicationsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Publications - Energy Nexus',
+    'Publications - Finance Abu Daabi',
     'Browse our collection of energy publications, reports, and special issues. Download PDFs and explore comprehensive energy research.',
     '/publications'
   )
@@ -178,8 +178,8 @@ export function generatePublicationMetadata(publication: any): Metadata {
 export function generateAboutMetadata(): Metadata {
   return generateMetadata(
     {},
-    'About Us - Energy Nexus',
-    'Learn about Energy Nexus, your trusted source for energy news, insights, and analysis. Discover our mission and commitment to energy journalism.',
+    'About Us - Finance Abu Daabi',
+    'Learn about Finance Abu Daabi, your trusted source for energy news, insights, and analysis. Discover our mission and commitment to energy journalism.',
     '/about'
   )
 }
@@ -187,8 +187,8 @@ export function generateAboutMetadata(): Metadata {
 export function generateContactMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Contact Us - Energy Nexus',
-    'Get in touch with Energy Nexus. Contact our team for editorial inquiries, advertising opportunities, or general questions.',
+    'Contact Us - Finance Abu Daabi',
+    'Get in touch with Finance Abu Daabi. Contact our team for editorial inquiries, advertising opportunities, or general questions.',
     '/contact'
   )
 }
@@ -196,8 +196,8 @@ export function generateContactMetadata(): Metadata {
 export function generateAdvertiseMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Advertise - Energy Nexus',
-    'Advertise with Energy Nexus and reach energy industry professionals, decision-makers, and stakeholders. Explore our advertising opportunities.',
+    'Advertise - Finance Abu Daabi',
+    'Advertise with Finance Abu Daabi and reach energy industry professionals, decision-makers, and stakeholders. Explore our advertising opportunities.',
     '/advertise'
   )
 }
