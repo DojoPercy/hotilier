@@ -4,9 +4,9 @@ import schemaTypes from './src/sanity/schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'Energy Nexus',
+  title: 'FInance Abu Dhabi',
 
-  projectId: 'zgs7rdoe',
+  projectId: process.env.SANITY_PROJECT_ID || 'ypnn99dw',
   dataset: 'production',
   basePath: '/admin',
   apiVersion: '2024-03-18',

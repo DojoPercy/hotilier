@@ -21,9 +21,9 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Energy Nexus - Latest Energy News, Articles & Insights",
+  title: "FInance Abu Daabi - Latest Energy News, Articles & Insights",
   description: "Stay updated with the latest energy news, articles, interviews, and insights from the energy industry.",
-  metadataBase: new URL('http://localhost:3000'),
+  metadataBase: new URL('http://FinanceAbuDhabi.com'),
 };
 
 export default function RootLayout({
