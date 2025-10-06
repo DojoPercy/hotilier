@@ -1,0 +1,1 @@
+export { SavedItemsList } from './SavedItemsList'

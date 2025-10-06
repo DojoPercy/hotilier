@@ -18,21 +18,20 @@ const Footer = () => {
             <div className="mb-6">
               <Image
                 src="/logo_final.png"
-                alt="Energy Nexus"
+                alt="Arabiangovernance"
                 width={150}
                 height={50}
                 className="mb-4"
               />
               <p className="text-gray-300 text-sm leading-relaxed">
-                Your premier source for energy industry insights, analysis, and news. 
-                Stay informed with the latest developments in the global energy sector.
+              The Arabian Governance & Business Boardroom – A premier Abu Dhabi–based platform spotlighting leadership, governance, and business excellence across the Arabian region. Through rankings, reports, and awards, it unites executives and organizations driving transformation, integrity, and sustainable growth.
               </p>
             </div>
             
             {/* Social Media Links */}
             <div className="flex space-x-4">
               <a 
-                href="https://twitter.com/energynexus" 
+                href="https://twitter.com/arabiangovernance.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
@@ -42,7 +41,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://linkedin.com/company/energynexus" 
+                href="https://linkedin.com/company/arabiangovernance" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
@@ -52,7 +51,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://facebook.com/energynexus" 
+                href="https://facebook.com/arabiangovernance" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
@@ -62,7 +61,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a 
-                href="https://youtube.com/energynexus" 
+                href="https://youtube.com/arabiangovernance" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
@@ -152,17 +151,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-6 text-white">Contact Us</h3>
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <svg className="w-5 h-5 text-brand-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <div>
-                  <p className="text-gray-300 text-sm font-medium">Africa Office</p>
-                  <p className="text-gray-400 text-sm">Ghana West-Africa - Accra</p>
-                  <p className="text-gray-400 text-sm">Kwabenya, Franko Estates</p>
-                </div>
-              </div>
+             
               
               <div className="flex items-start space-x-3">
                 <svg className="w-5 h-5 text-brand-blue mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -170,7 +159,7 @@ const Footer = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                 </svg>
                 <div>
-                  <p className="text-gray-300 text-sm font-medium">International Office</p>
+                  <p className="text-gray-300 text-sm font-medium">Office</p>
                   <p className="text-gray-400 text-sm">Business Center - First Floor</p>
                   <p className="text-gray-400 text-sm">Masdar City, Abu Dhabi - UAE</p>
                 </div>
@@ -207,7 +196,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {currentYear} The Boardroom Magazine. All rights reserved.
+              © {currentYear} Arabian Governance & Business Boardroom. All rights reserved.
             </div>
             
             <div className="flex space-x-6 text-sm">

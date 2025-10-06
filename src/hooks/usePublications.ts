@@ -55,7 +55,7 @@ export function useLatestPublications() {
         // Get latest publications (most recent year first)
         const latestPublications = allPublications
           .sort((a: Publication, b: Publication) => (b.year || 0) - (a.year || 0))
-          .slice(0, 3) // Limit to 3 publications
+          .slice(0, 8) // Limit to 3 publications
         setPublications(latestPublications)
       } catch (err) {
         setError(err instanceof Error ? err.message : 'Failed to fetch publications')

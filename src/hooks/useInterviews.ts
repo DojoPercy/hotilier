@@ -19,6 +19,11 @@ interface Interview {
     caption?: string
     credit?: string
   }
+  authors?: Array<{
+    _id: string;
+    name: string;
+    headshot?: any;
+  }>
   interviewee?: {
     _id: string
     name: string

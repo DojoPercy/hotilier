@@ -11,7 +11,7 @@ const FeaturedInterviews = () => {
 
   if (loading) {
     return (
-      <section className="py-16 bg-light-gray">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8">
             <h2 className="text-4xl font-bold text-brand-blue mb-2">Featured Interviews</h2>
@@ -37,7 +37,7 @@ const FeaturedInterviews = () => {
   }
 
   return (
-    <section className="py-16 bg-light-gray">
+    <section className="py-16 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-12">
           <h2 className="text-4xl font-bold text-brand-blue mb-2">Featured Interviews</h2>
@@ -53,12 +53,12 @@ const FeaturedInterviews = () => {
               }`}
             >
               <Link href={getInterviewUrl(interview)}>
-                <div className={`bg-white overflow-hidden  transition-transform duration-300  ${
+                <div className={`bg-light-gray overflow-hidden  transition-transform duration-300  ${
                   index === 0 ? 'lg:flex lg:h-full' : ''
                 }`}>
                   {/* Interview Image */}
                   <div className={`relative bg-gray-200 ${
-                    index === 0 ? 'lg:w-1/2 lg:h-auto' : 'h-64'
+                    index === 0 ? 'lg:w-1/2 lg:h-auto' : ' h-70'
                   } h-64`}>
                     {interview.interviewee?.headshot ? (
                       <Image
