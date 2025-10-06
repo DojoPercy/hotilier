@@ -1,14 +1,14 @@
 import { createClient } from 'next-sanity'
 
 export const client = createClient({
-  projectId: 'zgs7rdoe',
+  projectId: 'ypnn99dw',
   dataset: 'production',
   apiVersion: '2024-03-18',
   useCdn: false, // Set to false for real-time data
 })
 
 export const previewClient = createClient({
-  projectId: 'zgs7rdoe',
+  projectId: 'ypnn99dw',
   dataset: 'production',
   apiVersion: '2024-03-18',
   useCdn: false,
