@@ -4,7 +4,7 @@ export const client = createClient({
   projectId: 'ypnn99dw',
   dataset: 'production',
   apiVersion: '2024-03-18',
-  useCdn: false, // Set to false for real-time data
+  useCdn: false, 
 })
 
 export const previewClient = createClient({
