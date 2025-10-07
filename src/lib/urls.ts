@@ -2,7 +2,7 @@
  * URL utility functions for generating correct production URLs
  */
 
-const PRODUCTION_DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://theboardroommagazine.com';
+const PRODUCTION_DOMAIN = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.financeabudhabi.com';
 
 /**
  * Get the base URL for the current environment

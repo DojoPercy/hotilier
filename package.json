@@ -15,6 +15,7 @@
     "@makozi/paystack-react-pay": "^1.0.5",
     "@portabletext/react": "^3.2.1",
     "@sanity/image-url": "^1.1.0",
+    "@vercel/analytics": "^1.5.0",
     "dotenv": "^17.2.2",
     "framer-motion": "^12.23.12",
     "inngest": "^3.40.2",
