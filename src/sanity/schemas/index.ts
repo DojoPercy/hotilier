@@ -3,7 +3,7 @@
 // Notes
 // - Uses TypeScript for strong typing.
 // - Designed to mirror the information architecture visible on thebusinessyear.com:
-//   Content Types: Articles, Interviews, Videos, Events, Press / Media, Special Reports, Publications (Issues)
+//   Content Types: Articles, Interviews, Videos, Events, Press / Media, Power Lists, Publications (Issues)
 //   Taxonomies: Sectors, Regions, Years, Tags
 //   Entities: People (Interviewees), Organizations, Authors/Contributors, Partners
 //   Advertising: Ads, Ad Placements, Performance Tracking
@@ -12,6 +12,18 @@
 import { defineType, defineField, defineArrayMember } from 'sanity'
 import { ad, adType, adPlacement, adPerformance } from './ads'
 import { banner } from './banner'
+import aiSummary from './aiSummary'
+import { 
+  analyticsEvent, 
+  analyticsEventType, 
+  contentPerformance, 
+  analyticsSettings 
+} from './analytics'
+import { 
+  accessType, 
+  subscriptionPlan, 
+  userSubscription 
+} from './access'
 
 // =====================
 // Shared / Utility types
@@ -177,12 +189,36 @@ export const partner = defineType({
 })
 
 // ==================
+// Users (Auth0)
+// ==================
+export const user = defineType({
+  name: 'user',
+  title: 'User',
+  type: 'document',
+  fields: [
+    defineField({ name: 'name', type: 'string' }),
+    defineField({ name: 'email', type: 'string', validation: r => r.required() }),
+
+    defineField({ name: 'authProvider', title: 'Auth Provider', type: 'string' }),
+    defineField({ name: 'auth0Sub', title: 'Auth0 Sub', type: 'string' }),
+    defineField({ name: 'createdAt', type: 'datetime' }),
+  ],
+  preview: {
+    select: { title: 'name', subtitle: 'email' },
+    prepare({ title, subtitle }) {
+      return { title: title || subtitle || 'User', subtitle }
+    },
+  },
+})
+
+
+// ==================
 // Core Content Types
 // ==================
 const baseContentFields = [
   defineField({ name: 'title', type: 'string', validation: r => r.required() }),
   defineField({ name: 'slug', type: 'slug', options: { source: 'title' }, validation: r => r.required() }),
-  defineField({ name: 'dek', title: 'Deck / Standfirst', type: 'text' }),
+  defineField({ name: 'dek', title: 'Lead', type: 'text' }),
   defineField({ name: 'hero', type: 'heroMedia' }),
   defineField({ name: 'publishedAt', type: 'datetime' }),
   defineField({ name: 'updatedAt', type: 'datetime' }),
@@ -193,7 +229,7 @@ const baseContentFields = [
   defineField({ name: 'year', type: 'number', description: 'Display year (e.g., 2025)' }),
   defineField({ name: 'seo', type: 'seo' }),
   defineField({ name: 'isFeatured', title: 'Featured', type: 'boolean', initialValue: false }),
-  defineField({ name: 'paywall', title: 'Paywalled', type: 'boolean', initialValue: false }),
+  defineField({ name: 'accessType', type: 'accessType', initialValue: 'free' }),
 ]
 
 export const article = defineType({
@@ -246,17 +282,27 @@ export const press = defineType({
   ],
 })
 
-export const specialReport = defineType({
-  name: 'specialReport',
-  title: 'Special Report',
+export const powerList = defineType({
+  name: 'powerList',
+  title: 'Power List',
   type: 'document',
   fields: [
     ...baseContentFields,
+    defineField({name: 'category', type: 'reference', to: [{ type: 'powerListCategory' }], validation: r => r.required()}),
     defineField({ name: 'pdf', type: 'file', options: { accept: 'application/pdf' } }),
     defineField({ name: 'summary', type: 'richBlock' }),
   ]
 })
 
+export const powerListCategory = defineType({
+  name: 'powerListCategory',
+  title: 'Power List Category',
+  type: 'document',
+  fields: [
+    defineField({ name: 'title', type: 'string', validation: r => r.required() }),
+    defineField({ name: 'slug', type: 'slug', options: { source: 'title' }, validation: r => r.required() }),
+  ]
+})
 export const publication = defineType({
   name: 'publication',
   title: 'Publication (Issue)',
@@ -327,6 +373,62 @@ export const siteSettings = defineType({
   ]
 })
 
+
+// ==================
+// User Saved Items
+// ==================
+export const savedItem = defineType({
+  name: 'savedItem',
+  title: 'Saved Item',
+  type: 'document',
+  fields: [
+    // Reference to the user who saved the item
+    defineField({
+      name: 'user',
+      title: 'User',
+      type: 'reference',
+      to: [{ type: 'user' }],
+      validation: r => r.required(),
+    }),
+    // Reference to any content type that can be saved
+    defineField({
+      name: 'content',
+      title: 'Content',
+      type: 'reference',
+      to: [
+        { type: 'article' },
+        { type: 'interview' },
+        { type: 'event' },
+        { type: 'video' },
+        { type: 'press' },
+        { type: 'powerList' },
+        { type: 'publication' },
+      ],
+      validation: r => r.required(),
+    }),
+    defineField({ name: 'createdAt', title: 'Saved At', type: 'datetime', initialValue: () => new Date().toISOString() }),
+    defineField({ name: 'notes', title: 'Notes (optional)', type: 'text' }),
+  ],
+  preview: {
+    select: {
+      title: 'content.title',
+      subtitle: 'user.email',
+      media: 'content.hero.image',
+    },
+    prepare({ title, subtitle, media }) {
+      return {
+        title: title || 'Saved Item',
+        subtitle,
+        media,
+      }
+    },
+  },
+})
+
+
+// ============================
+// Subscription Plans are defined in access.ts
+
 // =====================
 // Export schema bundle
 // =====================
@@ -338,11 +440,19 @@ export default [
   // Entities
   organization, person, author, partner,
   // Content
-  article, interview, video, press, specialReport, publication, event,
+  article, interview, video, press, powerList, powerListCategory, publication, event,
+  // AI Features
+  aiSummary,
   // Advertising
   adType, ad, adPlacement, adPerformance,
   // Banners
   banner,
+  // Analytics
+  analyticsEventType, analyticsEvent, contentPerformance, analyticsSettings,
+  // Access Control
+  accessType, subscriptionPlan, userSubscription,
+  // Users
+  user, savedItem,
   // Pages & Settings
   page, siteSettings,
 ]

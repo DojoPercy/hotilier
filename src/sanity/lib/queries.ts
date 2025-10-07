@@ -11,7 +11,7 @@ export const baseFields = `
   updatedAt,
   year,
   isFeatured,
-  paywall,
+  accessType,
   seo {
     title,
     description,
@@ -315,6 +315,21 @@ export const searchContent = `*[_type in ["article", "interview", "video", "spec
   }
 }`
 
+// Special Report queries
+export const specialReportFields = `
+  ${baseFields},
+  summary,
+  pdf
+`
+
+export const getTop3SpecialReports = `*[_type == "specialReport" && defined(publishedAt)] | order(publishedAt desc)[0...3] {
+  ${specialReportFields}
+}`
+
+export const getSpecialReportBySlug = `*[_type == "specialReport" && slug.current == $slug][0] {
+  ${specialReportFields}
+}`
+
 // Content by taxonomy
 export const getContentBySector = `*[_type in ["article", "interview", "video"] && $sectorId in sectors[]._ref] | order(publishedAt desc) {
   _id,
@@ -337,5 +352,30 @@ export const getContentByRegion = `*[_type in ["article", "interview", "video"] 
   publishedAt,
   hero {
     image
+  }
+}`
+
+// Premium content queries for Member Exclusives
+export const getPremiumContent = `*[_type in ["article", "interview"] && accessType in ["login", "premium"]] | order(publishedAt desc)[0...6] {
+  _id,
+  _type,
+  title,
+  slug,
+  dek,
+  publishedAt,
+  accessType,
+  hero {
+    image,
+    caption
+  },
+  sectors[]-> {
+    _id,
+    title,
+    slug
+  },
+  regions[]-> {
+    _id,
+    title,
+    slug
   }
 }`
