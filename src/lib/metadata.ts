@@ -42,14 +42,14 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
     title,
     description,
     keywords: 'energy, news, articles, interviews, publications, events, renewable energy, sustainability, finance, MEA, Middle East, Africa',
-    authors: [{ name: 'Arabian Governance' }],
-    creator: 'Arabian Governance',
-    publisher: 'Arabian Governance',
+    authors: [{ name: 'Finance AbuDhabi' }],
+    creator: 'Finance AbuDhabi',
+    publisher: 'Finance AbuDhabi',
     openGraph: {
       title,
       description,
       url: canonicalUrl,
-      siteName: 'Arabian Governance',
+      siteName: 'Finance AbuDhabi',
       images: [
         {
           url: ogImage,
@@ -63,8 +63,8 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@arabiangovernance',
-      creator: '@arabiangovernance',
+      site: '@financeabudhabi',
+      creator: '@financeabudhabi',
       title,
       description,
       images: [ogImage],
@@ -89,7 +89,7 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
 export function generateHomeMetadata(): Metadata {
   return generateMetadata(
     {},
-    ' The Arabian Governance & Business Boardroom – A premier Abu Dhabi–based platform spotlighting leadership, governance, and business excellence across the Arabian region. Through rankings, reports, and awards, it unites executives and organizations driving transformation, integrity, and sustainable growth.',
+    ' The Finance AbuDhabi & Business Boardroom – A premier Abu Dhabi–based platform spotlighting leadership, governance, and business excellence across the Arabian region. Through rankings, reports, and awards, it unites executives and organizations driving transformation, integrity, and sustainable growth.',
     '/'
   )
 }
@@ -97,7 +97,7 @@ export function generateHomeMetadata(): Metadata {
 export function generateArticlesMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Articles - Arabian Governance',
+    'Articles - Finance AbuDhabi',
     'Explore our comprehensive collection of energy articles covering renewable energy, sustainability, industry trends, and expert insights.',
     '/articles'
   )
@@ -106,7 +106,7 @@ export function generateArticlesMetadata(seo?: SEOData): Metadata {
 export function generateArticleMetadata(article: any): Metadata {
   const seo = article.seo || {}
   const title = seo.title || article.title
-  const description = seo.description || article.dek || `Read about ${article.title} on Arabian Governance.`
+  const description = seo.description || article.dek || `Read about ${article.title} on Finance AbuDhabi.`
   const url = article.slug?.current ? `/articles/${article.slug.current}` : '/articles'
 
   return generateMetadata(
@@ -120,7 +120,7 @@ export function generateArticleMetadata(article: any): Metadata {
 export function generateInterviewsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Interviews - Arabian Governance',
+    'Interviews - Finance AbuDhabi',
     'Discover exclusive interviews with energy industry leaders, experts, and innovators. Get insights from the people shaping the future of energy.',
     '/interviews'
   )
@@ -144,7 +144,7 @@ export function generateInterviewMetadata(interview: any): Metadata {
 export function generateEventsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Events - Arabian Governance',
+    'Events - Finance AbuDhabi',
     'Stay informed about upcoming energy events, conferences, summits, and industry gatherings. Find events in your region and sector.',
     '/events'
   )
@@ -167,7 +167,7 @@ export function generateEventMetadata(event: any): Metadata {
 export function generatePublicationsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Publications - Arabian Governance',
+    'Publications - Finance AbuDhabi',
     'Browse our collection of energy publications, reports, and special issues. Download PDFs and explore comprehensive energy research.',
     '/publications'
   )
@@ -190,7 +190,7 @@ export function generatePublicationMetadata(publication: any): Metadata {
 export function generateVideosMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Videos - Arabian Governance',
+    'Videos - Finance AbuDhabi',
     'Watch energy industry videos, interviews, and insights. Discover expert analysis and industry trends through our video content.',
     '/videos'
   )
@@ -199,7 +199,7 @@ export function generateVideosMetadata(seo?: SEOData): Metadata {
 export function generateVideoMetadata(video: any): Metadata {
   const seo = video.seo || {}
   const title = seo.title || `${video.title} - Video`
-  const description = seo.description || video.description || `Watch ${video.title} on Arabian Governance.`
+  const description = seo.description || video.description || `Watch ${video.title} on Finance AbuDhabi.`
   const url = video.slug?.current ? `/videos/${video.slug.current}` : '/videos'
 
   return generateMetadata(
@@ -241,8 +241,8 @@ export function generateRegionMetadata(region: any): Metadata {
 export function generateAboutMetadata(): Metadata {
   return generateMetadata(
     {},
-    'About Us - Arabian Governance',
-    'Learn about Arabian Governance, your trusted source for energy news, insights, and analysis. Discover our mission and commitment to energy journalism.',
+    'About Us - Finance AbuDhabi',
+    'Learn about Finance AbuDhabi, your trusted source for energy news, insights, and analysis. Discover our mission and commitment to energy journalism.',
     '/about'
   )
 }
@@ -250,8 +250,8 @@ export function generateAboutMetadata(): Metadata {
 export function generateContactMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Contact Us - Arabian Governance',
-    'Get in touch with Arabian Governance. Contact our team for editorial inquiries, advertising opportunities, or general questions.',
+    'Contact Us - Finance AbuDhabi',
+    'Get in touch with Finance AbuDhabi. Contact our team for editorial inquiries, advertising opportunities, or general questions.',
     '/contact'
   )
 }
@@ -259,8 +259,8 @@ export function generateContactMetadata(): Metadata {
 export function generateAdvertiseMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Advertise - Arabian Governance',
-    'Advertise with Arabian Governance and reach energy industry professionals, decision-makers, and stakeholders. Explore our advertising opportunities.',
+    'Advertise - Finance AbuDhabi',
+    'Advertise with Finance AbuDhabi and reach energy industry professionals, decision-makers, and stakeholders. Explore our advertising opportunities.',
     '/advertise'
   )
 }
@@ -277,15 +277,15 @@ export function generateContractPublishingMetadata(): Metadata {
 export function generateMyAccountMetadata(): Metadata {
   return generateMetadata(
     {},
-    'My Account - Arabian Governance',
-    'Manage your Arabian Governance account, preferences, and subscriptions.',
+    'My Account - Finance AbuDhabi',
+    'Manage your Finance AbuDhabi account, preferences, and subscriptions.',
     '/my-account'
   )
 }
 
 export function generateNotFoundMetadata(): Metadata {
   return {
-    title: 'Page Not Found - Arabian Governance',
+    title: 'Page Not Found - Finance AbuDhabi',
     description: 'The page you are looking for could not be found.',
     robots: {
       index: false,
@@ -296,7 +296,7 @@ export function generateNotFoundMetadata(): Metadata {
 
 export function generateErrorMetadata(): Metadata {
   return {
-    title: 'Error - Arabian Governance',
+    title: 'Error - Finance AbuDhabi',
     description: 'An error occurred while loading this page.',
     robots: {
       index: false,
