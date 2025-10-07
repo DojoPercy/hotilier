@@ -1,7 +1,7 @@
 import { createClient } from 'next-sanity'
 
 export const client = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'v4050nk7',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ypnn99dw',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'arabian-production',
   apiVersion: '2024-03-18',
   useCdn: false,
@@ -12,7 +12,7 @@ export const client = createClient({
 })
 
 export const previewClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'v4050nk7',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ypnn99dw',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'arabian-production',
   apiVersion: '2024-03-18',
   useCdn: false,
@@ -24,7 +24,7 @@ export const previewClient = createClient({
 
 // Write client for mutations (requires write token)
 export const writeClient = createClient({
-  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'v4050nk7',
+  projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ypnn99dw',
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'arabian-production',
   apiVersion: '2024-03-18',
   useCdn: false,
