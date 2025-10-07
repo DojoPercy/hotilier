@@ -13,7 +13,7 @@ export const client = createClient({
 
 export const previewClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ypnn99dw',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'arabian-production',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   apiVersion: '2024-03-18',
   useCdn: false,
   stega: {
@@ -25,7 +25,7 @@ export const previewClient = createClient({
 // Write client for mutations (requires write token)
 export const writeClient = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'ypnn99dw',
-  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'arabian-production',
+  dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
   apiVersion: '2024-03-18',
   useCdn: false,
   token: process.env.SANITY_API_TOKEN || process.env.SANITY_API_READ_TOKEN,
