@@ -17,7 +17,7 @@ const Footer = () => {
             <div className="mb-6">
               <Image
                 src="/logo_final.png"
-                alt="Arabiangovernance"
+                alt="Finance Abu Dhabi"
                 width={150}
                 height={50}
                 className="mb-4"
@@ -35,7 +35,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com/arabiangovernance.com"
+                href="https://twitter.com/financeabudhabi"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
@@ -234,10 +234,13 @@ const Footer = () => {
                 <div>
                   <p className="text-gray-300 text-sm font-medium">Office</p>
                   <p className="text-gray-400 text-sm">
-                    Business Center - First Floor
+                    Business Center – First Floor, Incubator Building
                   </p>
                   <p className="text-gray-400 text-sm">
-                    Masdar City, Abu Dhabi - UAE
+                    Masdar City, Abu Dhabi
+                  </p>
+                  <p className="text-gray-400 text-sm">
+                    United Arab Emirates
                   </p>
                 </div>
               </div>
@@ -258,34 +261,10 @@ const Footer = () => {
                 </svg>
                 <div>
                   <a
-                    href="mailto:info@tgbboardroom.com"
+                    href="mailto:marcom@radcommgroup.com"
                     className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
                   >
-                    info@tgbboardroom.com
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <svg
-                  className="w-5 h-5 text-brand-blue flex-shrink-0"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
-                  />
-                </svg>
-                <div>
-                  <a
-                    href="mailto:info@financeabudhabi.com"
-                    className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
-                  >
-                    info@financeabudhabi.com
+                    marcom@radcommgroup.com
                   </a>
                 </div>
               </div>

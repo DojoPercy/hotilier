@@ -24,6 +24,7 @@ import {
   subscriptionPlan, 
   userSubscription 
 } from './access'
+import { contractInquiry } from './contractInquiry'
 
 // =====================
 // Shared / Utility types
@@ -455,4 +456,6 @@ export default [
   user, savedItem,
   // Pages & Settings
   page, siteSettings,
+  // Forms & Inquiries
+  contractInquiry,
 ]

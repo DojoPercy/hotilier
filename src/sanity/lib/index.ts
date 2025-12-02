@@ -1,5 +1,5 @@
 // Export all Sanity utilities
-export { client, previewClient } from './client'
+export { client, previewClient, writeClient } from './client'
 export { urlFor, getImageUrl, getResponsiveImageUrls, getCroppedImageUrl } from './image'
 export { PortableTextComponent, extractTextFromPortableText, getReadingTime } from './portableText'
 
