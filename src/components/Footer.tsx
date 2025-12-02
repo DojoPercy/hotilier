@@ -282,10 +282,10 @@ const Footer = () => {
                 </svg>
                 <div>
                   <a
-                    href="mailto:info@arabiangovernance.com"
+                    href="mailto:info@financeabudhabi.com"
                     className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
                   >
-                    info@arabiangovernance.com
+                    info@financeabudhabi.com
                   </a>
                 </div>
               </div>
