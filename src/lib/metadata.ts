@@ -268,8 +268,8 @@ export function generateAdvertiseMetadata(): Metadata {
 export function generateContractPublishingMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Contract Publishing - The Boardroom Magazine',
-    'Professional contract publishing services by The Boardroom Magazine. Custom publishing solutions for leaders and organizations. Your story, published. Your brand, elevated.',
+    'Contract Publishing - Finance Abu Dhabi Magazine',
+    'Professional contract publishing services by Finance Abu Dhabi Magazine. Custom publishing solutions for leaders and organizations. Your story, published. Your leadership, elevated.',
     '/contract-publishing'
   )
 }

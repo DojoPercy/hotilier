@@ -283,7 +283,7 @@ function PaywallContent({
             This article is only available to subscribers
           </h2>
           <p className="text-xl text-gray-600">
-            Subscribe now for unlimited access to The Boardroom Magazine
+            Subscribe now for unlimited access to Finance Abu Dhabi Magazine
           </p>
         </div>
 
@@ -306,7 +306,7 @@ function PaywallContent({
                 <div className="w-4 h-4 border-2 border-gray-300 rounded-full"></div>
                 <div>
                   <h4 className="font-semibold text-gray-900">All access - Monthly</h4>
-                  <p className="text-sm text-gray-600">Unlimited access to The Boardroom Magazine</p>
+                  <p className="text-sm text-gray-600">Unlimited access to Finance Abu Dhabi Magazine</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -326,7 +326,7 @@ function PaywallContent({
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900">All access - Annual</h4>
-                  <p className="text-sm text-gray-600">Unlimited access to The Boardroom Magazine</p>
+                  <p className="text-sm text-gray-600">Unlimited access to Finance Abu Dhabi Magazine</p>
                 </div>
               </div>
               <div className="flex items-center space-x-4">
@@ -414,7 +414,7 @@ function PaywallContent({
           <h3 className="text-lg font-semibold text-gray-900 mb-4">What Our Subscribers Say</h3>
           <div className="space-y-4">
             <div className="border-l-4 border-brand-blue pl-4">
-              <p className="text-gray-700 italic">"The Boardroom Magazine provides the most comprehensive coverage of business and industry insights. Worth every penny!"</p>
+              <p className="text-gray-700 italic">"Finance Abu Dhabi Magazine provides the most comprehensive coverage of finance and investment insights in the GCC region. Worth every penny!"</p>
               <p className="text-sm text-gray-500 mt-2">- Sarah Johnson, Business Analyst</p>
             </div>
             <div className="border-l-4 border-brand-blue pl-4">
