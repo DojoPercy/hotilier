@@ -83,7 +83,7 @@ export default function ContractPublishingPage() {
         'Concise editorial formats (10–30 pages)',
         'Clean, template-driven design',
         'Digital-only distribution',
-        'Co-branding with Finance Abu Dhabi Magazine',
+        'Co-branding with Hotelier Africa Magazine',
         'Core editorial customization'
       ],
       contactText: '📩 Contact Our Team'
@@ -95,7 +95,7 @@ export default function ContractPublishingPage() {
         'One-off or recurring publications',
         'Extended formats (30–50 pages)',
         'Multiple design templates and layouts',
-        'Co-branding with Finance Abu Dhabi Magazine',
+        'Co-branding with Hotelier Africa Magazine',
         'Digital distribution with optional premium print editions',
         'Enhanced editorial and design customization'
       ],
@@ -109,7 +109,7 @@ export default function ContractPublishingPage() {
         'Comprehensive publications (one-off or recurring)',
         'Fully bespoke design, branding, and editorial structure',
         'Unlimited page length',
-        'Co-branding with Finance Abu Dhabi Magazine',
+        'Co-branding with Hotelier Africa Magazine',
         'High-quality premium print and digital editions',
         'Strategic and targeted distribution support',
         'Additional content creation services (interviews, photography, reporting)',
@@ -129,14 +129,14 @@ export default function ContractPublishingPage() {
             Contract Publishing
           </h1>
           <h2 className="text-3xl md:text-4xl font-semibold mb-4">
-            Finance Abu Dhabi Magazine
+            Hotelier Africa Magazine
           </h2>
           <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto">
             Your Story, Published.<br />
             Your Leadership, Elevated.
           </p>
           <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
-            Finance Abu Dhabi Magazine offers bespoke publishing solutions crafted to spotlight
+            Hotelier Africa Magazine offers bespoke publishing solutions crafted to spotlight
             visionary leaders, celebrate organisational excellence, and position your brand at the forefront
             of the regional and global financial landscape. Whether you require a dedicated feature, a recurring executive series, or a fully customised
             flagship edition, our publishing options are designed to amplify your influence and reach the
@@ -361,11 +361,11 @@ export default function ContractPublishingPage() {
                   className="mt-1 mr-3"
                 />
                 <label htmlFor="agreeToCommunications" className="text-sm text-gray-700">
-                  I agree to receive communications from Finance Abu Dhabi Magazine.
+                  I agree to receive communications from Hotelier Africa Magazine.
                 </label>
               </div>
               <p className="text-sm text-gray-600 mb-4">
-                Finance Abu Dhabi Magazine is committed to safeguarding your privacy. Your personal
+                Hotelier Africa Magazine is committed to safeguarding your privacy. Your personal
                 information will only be used to manage your account and deliver the services you request.
               </p>
               <p className="text-sm text-gray-600 mb-4">
@@ -373,7 +373,7 @@ export default function ContractPublishingPage() {
                 may be of interest. You may unsubscribe at any time.
               </p>
               <p className="text-sm text-gray-600">
-                By clicking Submit, you consent to Finance Abu Dhabi Magazine storing and processing the
+                By clicking Submit, you consent to Hotelier Africa Magazine storing and processing the
                 information provided to fulfil your request.
               </p>
             </div>
@@ -409,7 +409,7 @@ export default function ContractPublishingPage() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                   <div>
-                    <p className="font-semibold text-gray-900 mb-2">Finance Abu Dhabi Magazine</p>
+                    <p className="font-semibold text-gray-900 mb-2">Hotelier Africa Magazine</p>
                     <p className="text-gray-600">Business Center – First Floor, Incubator Building</p>
                     <p className="text-gray-600">Masdar City, Abu Dhabi</p>
                     <p className="text-gray-600">United Arab Emirates</p>

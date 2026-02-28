@@ -108,7 +108,7 @@ const resend = new Resend(process.env.RESEND_API_KEY)
 export async function sendContractInquiryEmail(data: ContractInquiryEmailData) {
   try {
     await resend.emails.send({
-      from: 'Finance Abu Dhabi <noreply@financeabudhabi.com>',
+      from: 'Hotelier Africa <noreply@financeabudhabi.com>',
       to: 'marcom@radcommgroup.com',
       subject: `New Contract Publishing Inquiry from ${data.firstName} ${data.lastName}`,
       html: generateContractInquiryEmailTemplate(data),

@@ -253,7 +253,7 @@ export default function ArticlePage() {
     })) || [],
     "publisher": {
       "@type": "Organization",
-      "name": "Finance Abu Dhabi",
+      "name": "Hotelier Africa",
       "logo": {
         "@type": "ImageObject",
         "url": `${typeof window !== 'undefined' ? window.location.origin : ''}/logo_final.png`

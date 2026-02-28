@@ -2,7 +2,7 @@ import { createClient } from 'next-sanity'
 
 // A token-authenticated client for write operations
 export const writeClient = createClient({
-	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || 'zgs7rdoe',
+	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID || '5dmr2qcf',
 	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET || 'production',
 	apiVersion: '2024-03-18',
 	useCdn: false,

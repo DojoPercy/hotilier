@@ -11,7 +11,7 @@ export default function AboutPage() {
         {/* Hero Section */}
         <div className="text-center mb-16">
           <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-            About Finance Abu Dhabi
+            About Hotelier Africa
           </h1>
           <div className="w-24 h-1 bg-brand-blue mx-auto mb-8"></div>
         </div>
@@ -20,7 +20,7 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Finance Abu Dhabi is a premium digital and print publication dedicated to capturing the
+              Hotelier Africa is a premium digital and print publication dedicated to capturing the
               evolving finance, investment, and economic landscape of the GCC region. Positioned as one
               of the region's authoritative voices on financial leadership, the magazine delivers high-level
               insights into banking, fintech, capital markets, economic diversification, sovereign wealth
@@ -28,7 +28,7 @@ export default function AboutPage() {
             </p>
 
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Published from Masdar City, Abu Dhabi, Finance Abu Dhabi is an initiative of Rad
+              Published from Masdar City, Abu Dhabi, Hotelier Africa is an initiative of Rad
               Communications Limited, a leading media, events, and corporate communications
               organisation committed to elevating thought leadership and industry excellence across the
               Middle East and Africa.
@@ -81,7 +81,7 @@ export default function AboutPage() {
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Us</h2>
               <div className="space-y-4 text-gray-700">
                 <p>
-                  <strong>Finance Abu Dhabi Magazine</strong><br />
+                  <strong>Hotelier Africa Magazine</strong><br />
                   Business Center – First Floor, Incubator Building<br />
                   Masdar City, Abu Dhabi<br />
                   United Arab Emirates

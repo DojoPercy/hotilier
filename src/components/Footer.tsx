@@ -16,14 +16,14 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="mb-6">
               <Image
-                src="/logo_final.png"
-                alt="Finance Abu Dhabi"
+                src="/logo_white.png"
+                alt="Hotelier Africa"
                 width={150}
                 height={50}
                 className="mb-4"
               />
               <p className="text-gray-300 text-sm leading-relaxed">
-                Finance Abu Dhabi is a premium digital and print magazine
+                Hotelier Africa is a premium digital and print magazine
                 dedicated to the finance and investment landscape of the GCC
                 region, offering insights into banking, fintech, capital
                 markets, and economic development across Abu Dhabi and the Gulf.
@@ -277,7 +277,7 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-gray-400 text-sm">
-              © {currentYear} Finance Abu Dhabi. All
+              © {currentYear} Hotelier Africa. All
               rights reserved.
             </div>
 

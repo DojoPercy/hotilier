@@ -4,9 +4,9 @@ import schemaTypes from './src/sanity/schemas'
 
 export default defineConfig({
   name: 'default',
-  title: 'FInance Abu Dhabi',
+  title: 'Hotelier Africa',
 
-  projectId: process.env.SANITY_PROJECT_ID || 'ypnn99dw',
+  projectId: process.env.SANITY_PROJECT_ID || '5dmr2qcf',
   dataset: 'production',
   basePath: '/admin',
   apiVersion: '2024-03-18',

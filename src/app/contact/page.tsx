@@ -49,7 +49,7 @@ export default function ContactPage() {
             Contact Us
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Get in touch with Finance Abu Dhabi Magazine. We'd love to hear from you.
+            Get in touch with Hotelier Africa Magazine. We'd love to hear from you.
           </p>
         </div>
 
@@ -66,7 +66,7 @@ export default function ContactPage() {
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Office Address</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Finance Abu Dhabi Magazine<br />
+                    Hotelier Africa Magazine<br />
                     Business Center – First Floor, Incubator Building<br />
                     Masdar City, Abu Dhabi<br />
                     United Arab Emirates
@@ -91,11 +91,11 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-12 p-6 bg-gray-50 rounded-lg">
-              <h3 className="text-lg font-semibold text-gray-900 mb-4">About Finance Abu Dhabi</h3>
+              <h3 className="text-lg font-semibold text-gray-900 mb-4">About Hotelier Africa</h3>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Finance Abu Dhabi is a premium digital and print publication dedicated to capturing the
+                Hotelier Africa is a premium digital and print publication dedicated to capturing the
                 evolving finance, investment, and economic landscape of the GCC region. Published from
-                Masdar City, Abu Dhabi, Finance Abu Dhabi is an initiative of Rad Communications Limited.
+                Masdar City, Abu Dhabi, Hotelier Africa is an initiative of Rad Communications Limited.
               </p>
             </div>
           </div>
