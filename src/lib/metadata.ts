@@ -63,8 +63,8 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
     },
     twitter: {
       card: 'summary_large_image',
-      site: '@financeabudhabi',
-      creator: '@financeabudhabi',
+      site: '@hotelierafrica',
+      creator: '@hotelierafrica',
       title,
       description,
       images: [ogImage],

@@ -24,7 +24,7 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "FInance Abu Daabi - Latest Energy News, Articles & Insights",
   description: "Stay updated with the latest energy news, articles, interviews, and insights from the energy industry.",
-  metadataBase: new URL('http://FinanceAbuDhabi.com'),
+  metadataBase: new URL('http://hotelierafrica.com'),
 };
 
 export default function RootLayout({

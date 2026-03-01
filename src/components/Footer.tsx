@@ -35,7 +35,7 @@ const Footer = () => {
             {/* Social Media Links */}
             <div className="flex space-x-4">
               <a
-                href="https://twitter.com/financeabudhabi"
+                href="https://twitter.com/hotelierafrica"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
@@ -63,7 +63,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.facebook.com/FinanceAbuDhabi/"
+                href="https://www.facebook.com/hotelierafrica/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
@@ -77,7 +77,7 @@ const Footer = () => {
                 </svg>
               </a>
               <a
-                href="https://www.youtube.com/@financeabudhabi"
+                href="https://www.youtube.com/@hotelierafrica"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
