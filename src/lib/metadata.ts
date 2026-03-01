@@ -42,14 +42,14 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
     title,
     description,
     keywords: 'energy, news, articles, interviews, publications, events, renewable energy, sustainability, finance, MEA, Middle East, Africa',
-    authors: [{ name: 'Finance AbuDhabi' }],
-    creator: 'Finance AbuDhabi',
-    publisher: 'Finance AbuDhabi',
+    authors: [{ name: 'Hotelier Africa' }],
+    creator: 'Hotelier Africa',
+    publisher: 'Hotelier Africa',
     openGraph: {
       title,
       description,
       url: canonicalUrl,
-      siteName: 'Finance AbuDhabi',
+      siteName: 'Hotelier Africa',
       images: [
         {
           url: ogImage,
@@ -89,7 +89,7 @@ export function generateMetadata(data: SEOData, defaultTitle: string, defaultDes
 export function generateHomeMetadata(): Metadata {
   return generateMetadata(
     {},
-    ' The Finance AbuDhabi & Business Boardroom – A premier Abu Dhabi–based platform spotlighting leadership, governance, and business excellence across the Arabian region. Through rankings, reports, and awards, it unites executives and organizations driving transformation, integrity, and sustainable growth.',
+    ' The Hotelier Africa & Business Boardroom – A premier Abu Dhabi–based platform spotlighting leadership, governance, and business excellence across the Arabian region. Through rankings, reports, and awards, it unites executives and organizations driving transformation, integrity, and sustainable growth.',
     '/'
   )
 }
@@ -97,7 +97,7 @@ export function generateHomeMetadata(): Metadata {
 export function generateArticlesMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Articles - Finance AbuDhabi',
+    'Articles - Hotelier Africa',
     'Explore our comprehensive collection of energy articles covering renewable energy, sustainability, industry trends, and expert insights.',
     '/articles'
   )
@@ -106,7 +106,7 @@ export function generateArticlesMetadata(seo?: SEOData): Metadata {
 export function generateArticleMetadata(article: any): Metadata {
   const seo = article.seo || {}
   const title = seo.title || article.title
-  const description = seo.description || article.dek || `Read about ${article.title} on Finance AbuDhabi.`
+  const description = seo.description || article.dek || `Read about ${article.title} on Hotelier Africa.`
   const url = article.slug?.current ? `/articles/${article.slug.current}` : '/articles'
 
   return generateMetadata(
@@ -120,7 +120,7 @@ export function generateArticleMetadata(article: any): Metadata {
 export function generateInterviewsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Interviews - Finance AbuDhabi',
+    'Interviews - Hotelier Africa',
     'Discover exclusive interviews with energy industry leaders, experts, and innovators. Get insights from the people shaping the future of energy.',
     '/interviews'
   )
@@ -144,7 +144,7 @@ export function generateInterviewMetadata(interview: any): Metadata {
 export function generateEventsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Events - Finance AbuDhabi',
+    'Events - Hotelier Africa',
     'Stay informed about upcoming energy events, conferences, summits, and industry gatherings. Find events in your region and sector.',
     '/events'
   )
@@ -167,7 +167,7 @@ export function generateEventMetadata(event: any): Metadata {
 export function generatePublicationsMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Publications - Finance AbuDhabi',
+    'Publications - Hotelier Africa',
     'Browse our collection of energy publications, reports, and special issues. Download PDFs and explore comprehensive energy research.',
     '/publications'
   )
@@ -190,7 +190,7 @@ export function generatePublicationMetadata(publication: any): Metadata {
 export function generateVideosMetadata(seo?: SEOData): Metadata {
   return generateMetadata(
     seo || {},
-    'Videos - Finance AbuDhabi',
+    'Videos - Hotelier Africa',
     'Watch energy industry videos, interviews, and insights. Discover expert analysis and industry trends through our video content.',
     '/videos'
   )
@@ -199,7 +199,7 @@ export function generateVideosMetadata(seo?: SEOData): Metadata {
 export function generateVideoMetadata(video: any): Metadata {
   const seo = video.seo || {}
   const title = seo.title || `${video.title} - Video`
-  const description = seo.description || video.description || `Watch ${video.title} on Finance AbuDhabi.`
+  const description = seo.description || video.description || `Watch ${video.title} on Hotelier Africa.`
   const url = video.slug?.current ? `/videos/${video.slug.current}` : '/videos'
 
   return generateMetadata(
@@ -241,8 +241,8 @@ export function generateRegionMetadata(region: any): Metadata {
 export function generateAboutMetadata(): Metadata {
   return generateMetadata(
     {},
-    'About Us - Finance AbuDhabi',
-    'Learn about Finance AbuDhabi, your trusted source for energy news, insights, and analysis. Discover our mission and commitment to energy journalism.',
+    'About Us - Hotelier Africa',
+    'Learn about Hotelier Africa, your trusted source for energy news, insights, and analysis. Discover our mission and commitment to energy journalism.',
     '/about'
   )
 }
@@ -250,8 +250,8 @@ export function generateAboutMetadata(): Metadata {
 export function generateContactMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Contact Us - Finance AbuDhabi',
-    'Get in touch with Finance AbuDhabi. Contact our team for editorial inquiries, advertising opportunities, or general questions.',
+    'Contact Us - Hotelier Africa',
+    'Get in touch with Hotelier Africa. Contact our team for editorial inquiries, advertising opportunities, or general questions.',
     '/contact'
   )
 }
@@ -259,8 +259,8 @@ export function generateContactMetadata(): Metadata {
 export function generateAdvertiseMetadata(): Metadata {
   return generateMetadata(
     {},
-    'Advertise - Finance AbuDhabi',
-    'Advertise with Finance AbuDhabi and reach energy industry professionals, decision-makers, and stakeholders. Explore our advertising opportunities.',
+    'Advertise - Hotelier Africa',
+    'Advertise with Hotelier Africa and reach energy industry professionals, decision-makers, and stakeholders. Explore our advertising opportunities.',
     '/advertise'
   )
 }
@@ -277,15 +277,15 @@ export function generateContractPublishingMetadata(): Metadata {
 export function generateMyAccountMetadata(): Metadata {
   return generateMetadata(
     {},
-    'My Account - Finance AbuDhabi',
-    'Manage your Finance AbuDhabi account, preferences, and subscriptions.',
+    'My Account - Hotelier Africa',
+    'Manage your Hotelier Africa account, preferences, and subscriptions.',
     '/my-account'
   )
 }
 
 export function generateNotFoundMetadata(): Metadata {
   return {
-    title: 'Page Not Found - Finance AbuDhabi',
+    title: 'Page Not Found - Hotelier Africa',
     description: 'The page you are looking for could not be found.',
     robots: {
       index: false,
@@ -296,7 +296,7 @@ export function generateNotFoundMetadata(): Metadata {
 
 export function generateErrorMetadata(): Metadata {
   return {
-    title: 'Error - Finance AbuDhabi',
+    title: 'Error - Hotelier Africa',
     description: 'An error occurred while loading this page.',
     robots: {
       index: false,
