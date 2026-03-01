@@ -8,7 +8,11 @@ const nextConfig: NextConfig = {
         hostname: 'cdn.sanity.io',
       }
     ]
-  }
+  },
+  serverExternalPackages: ['jsdom', 'inngest'],
+  turbopack: {
+    resolveExtensions: ['.ts', '.tsx', '.js', '.jsx', '.mjs', '.json'],
+  },
 };
 
 export default nextConfig;
