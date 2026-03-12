@@ -137,8 +137,8 @@ export default function ContractPublishingPage() {
           </p>
           <p className="text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
             Hotelier Africa Magazine offers bespoke publishing solutions crafted to spotlight
-            visionary leaders, celebrate organisational excellence, and position your brand at the forefront
-            of the regional and global financial landscape. Whether you require a dedicated feature, a recurring executive series, or a fully customised
+            visionary hospitality leaders, celebrate organisational excellence, and position your brand at the forefront
+            of Africa's vibrant hospitality and tourism landscape. Whether you require a dedicated feature, a recurring executive series, or a fully customised
             flagship edition, our publishing options are designed to amplify your influence and reach the
             audiences that matter most.
           </p>
@@ -325,12 +325,16 @@ export default function ContractPublishingPage() {
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-transparent"
               >
                 <option value="">(Select your country)</option>
-                <option value="uae">United Arab Emirates</option>
-                <option value="saudi-arabia">Saudi Arabia</option>
-                <option value="kuwait">Kuwait</option>
-                <option value="qatar">Qatar</option>
-                <option value="bahrain">Bahrain</option>
-                <option value="oman">Oman</option>
+                <option value="nigeria">Nigeria</option>
+                <option value="south-africa">South Africa</option>
+                <option value="kenya">Kenya</option>
+                <option value="ghana">Ghana</option>
+                <option value="ethiopia">Ethiopia</option>
+                <option value="tanzania">Tanzania</option>
+                <option value="egypt">Egypt</option>
+                <option value="morocco">Morocco</option>
+                <option value="rwanda">Rwanda</option>
+                <option value="senegal">Senegal</option>
                 <option value="other">Other</option>
               </select>
             </div>
@@ -410,9 +414,7 @@ export default function ContractPublishingPage() {
                   </svg>
                   <div>
                     <p className="font-semibold text-gray-900 mb-2">Hotelier Africa Magazine</p>
-                    <p className="text-gray-600">Business Center – First Floor, Incubator Building</p>
-                    <p className="text-gray-600">Masdar City, Abu Dhabi</p>
-                    <p className="text-gray-600">United Arab Emirates</p>
+                    <p className="text-gray-600">An initiative of Strategic Brand Focus Africa LTD</p>
                   </div>
                 </div>
                 <div className="flex items-center">

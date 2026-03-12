@@ -67,9 +67,7 @@ export default function ContactPage() {
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Office Address</h3>
                   <p className="text-gray-700 leading-relaxed">
                     Hotelier Africa Magazine<br />
-                    Business Center – First Floor, Incubator Building<br />
-                    Masdar City, Abu Dhabi<br />
-                    United Arab Emirates
+                    An initiative of Strategic Brand Focus Africa LTD
                   </p>
                 </div>
               </div>
@@ -93,9 +91,10 @@ export default function ContactPage() {
             <div className="mt-12 p-6 bg-gray-50 rounded-lg">
               <h3 className="text-lg font-semibold text-gray-900 mb-4">About Hotelier Africa</h3>
               <p className="text-gray-700 leading-relaxed text-sm">
-                Hotelier Africa is a premium digital and print publication dedicated to capturing the
-                evolving finance, investment, and economic landscape of the GCC region. Published from
-                Masdar City, Abu Dhabi, Hotelier Africa is an initiative of Rad Communications Limited.
+                Hotelier Africa is a premium digital and print magazine dedicated to the evolving
+                hospitality and tourism landscape across Africa. Through expert analysis, industry features,
+                and exclusive interviews, we highlight innovations and opportunities driving growth within
+                Africa's vibrant hospitality ecosystem. An initiative of Strategic Brand Focus Africa LTD.
               </p>
             </div>
           </div>

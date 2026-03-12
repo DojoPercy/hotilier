@@ -20,26 +20,26 @@ export default function AboutPage() {
         <div className="max-w-4xl mx-auto">
           <div className="prose prose-lg max-w-none">
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Hotelier Africa is a premium digital and print publication dedicated to capturing the
-              evolving finance, investment, and economic landscape of the GCC region. Positioned as one
-              of the region's authoritative voices on financial leadership, the magazine delivers high-level
-              insights into banking, fintech, capital markets, economic diversification, sovereign wealth
-              strategies, and the future of finance across Abu Dhabi and the wider Gulf.
+              Hotelier Africa is a premium digital and print magazine dedicated to the evolving
+              hospitality and tourism landscape across Africa. The publication provides in-depth insights
+              into the hotel industry, luxury and business travel, tourism development, hospitality
+              investments, and emerging trends shaping the sector.
             </p>
 
             <p className="text-xl text-gray-700 leading-relaxed mb-8">
-              Published from Masdar City, Abu Dhabi, Hotelier Africa is an initiative of Rad
-              Communications Limited, a leading media, events, and corporate communications
-              organisation committed to elevating thought leadership and industry excellence across the
-              Middle East and Africa.
+              Through expert analysis, industry features, and exclusive interviews with leading hoteliers,
+              investors, and tourism stakeholders, Hotelier Africa highlights innovations, best practices,
+              and opportunities driving growth within Africa's vibrant hospitality ecosystem. This is an
+              initiative of Strategic Brand Focus Africa LTD.
             </p>
 
             <div className="bg-gray-50 p-8 rounded-lg my-12">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Our Mission</h2>
               <p className="text-gray-700 leading-relaxed">
-                To provide authoritative, insightful, and forward-thinking coverage of the financial
-                landscape in the GCC region, connecting leaders, investors, and decision-makers with
-                the information and perspectives they need to navigate the evolving world of finance.
+                To provide authoritative, insightful, and forward-thinking coverage of the hospitality
+                and tourism landscape across Africa, connecting hoteliers, investors, and decision-makers
+                with the information and perspectives they need to navigate the evolving world of African
+                hospitality.
               </p>
             </div>
 
@@ -48,27 +48,27 @@ export default function AboutPage() {
               <ul className="space-y-4 text-gray-700">
                 <li className="flex items-start">
                   <span className="text-brand-blue mr-3">•</span>
-                  <span>Banking and financial services</span>
+                  <span>Hotel industry news and developments</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-blue mr-3">•</span>
-                  <span>Fintech innovation and digital transformation</span>
+                  <span>Luxury and business travel</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-blue mr-3">•</span>
-                  <span>Capital markets and investment strategies</span>
+                  <span>Tourism development across Africa</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-blue mr-3">•</span>
-                  <span>Economic diversification initiatives</span>
+                  <span>Hospitality investments and opportunities</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-blue mr-3">•</span>
-                  <span>Sovereign wealth fund strategies</span>
+                  <span>Emerging trends shaping the hospitality sector</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-blue mr-3">•</span>
-                  <span>Executive interviews and thought leadership</span>
+                  <span>Exclusive interviews with leading hoteliers and tourism stakeholders</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-brand-blue mr-3">•</span>
@@ -82,9 +82,7 @@ export default function AboutPage() {
               <div className="space-y-4 text-gray-700">
                 <p>
                   <strong>Hotelier Africa Magazine</strong><br />
-                  Business Center – First Floor, Incubator Building<br />
-                  Masdar City, Abu Dhabi<br />
-                  United Arab Emirates
+                  An initiative of Strategic Brand Focus Africa LTD
                 </p>
                 <p>
                   <strong>Email:</strong>{' '}

@@ -24,11 +24,11 @@ const Footer = () => {
               />
               <p className="text-gray-300 text-sm leading-relaxed">
                 Hotelier Africa is a premium digital and print magazine
-                dedicated to the finance and investment landscape of the GCC
-                region, offering insights into banking, fintech, capital
-                markets, and economic development across Abu Dhabi and the Gulf.
-                This is an initiative of Rad Communications Limited, Masdar
-                City, Abu Dhabi.
+                dedicated to the evolving hospitality and tourism landscape
+                across Africa, offering insights into the hotel industry, luxury
+                and business travel, tourism development, and hospitality
+                investments. This is an initiative of Strategic Brand Focus
+                Africa LTD.
               </p>
             </div>
 
@@ -232,15 +232,9 @@ const Footer = () => {
                   />
                 </svg>
                 <div>
-                  <p className="text-gray-300 text-sm font-medium">Office</p>
+                  <p className="text-gray-300 text-sm font-medium">Hotelier Africa Magazine</p>
                   <p className="text-gray-400 text-sm">
-                    Business Center – First Floor, Incubator Building
-                  </p>
-                  <p className="text-gray-400 text-sm">
-                    Masdar City, Abu Dhabi
-                  </p>
-                  <p className="text-gray-400 text-sm">
-                    United Arab Emirates
+                    An initiative of Strategic Brand Focus Africa LTD
                   </p>
                 </div>
               </div>
