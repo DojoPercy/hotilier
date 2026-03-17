@@ -214,7 +214,9 @@ export default function Header() {
                 />
               </svg>
             </button>
-            <AuthButtons />
+            <div className="hidden md:block">
+              <AuthButtons />
+            </div>
           </div>
 
           {/* Mobile Menu */}
