@@ -58,6 +58,30 @@ export default function MobileMenu() {
               {/* Navigation */}
               <nav className="flex-1 px-6 py-4 space-y-2">
                 <Link 
+                  href="/articles"
+                  onClick={toggleMenu}
+                  className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    isActive('/articles') 
+                      ? 'bg-[#F4F4F7] text-brand-blue' 
+                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue'
+                  }`}
+                >
+                  News
+                </Link>
+
+                <Link 
+                  href="/interviews"
+                  onClick={toggleMenu}
+                  className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    isActive('/interviews') 
+                      ? 'bg-[#F4F4F7] text-brand-blue' 
+                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue'
+                  }`}
+                >
+                  Leadership
+                </Link>
+
+                <Link 
                   href="/interviews"
                   onClick={toggleMenu}
                   className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
@@ -68,42 +92,54 @@ export default function MobileMenu() {
                 >
                   Interviews
                 </Link>
-                
+
                 <Link 
-                  href="/articles"
+                  href="/appointments"
                   onClick={toggleMenu}
                   className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive('/articles') 
+                    isActive('/appointments') 
                       ? 'bg-[#F4F4F7] text-brand-blue' 
-                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-'
+                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue'
                   }`}
                 >
-                  Articles
+                  Appointments
                 </Link>
-                
+
                 <Link 
-                  href="/regions"
+                  href="/new-openings"
                   onClick={toggleMenu}
                   className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive('/regions') 
+                    isActive('/new-openings') 
                       ? 'bg-[#F4F4F7] text-brand-blue' 
-                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-'
+                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue'
                   }`}
                 >
-                  Regions
+                  New Openings
+                </Link>
+
+                <Link 
+                  href="/power-list"
+                  onClick={toggleMenu}
+                  className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
+                    isActive('/power-list') 
+                      ? 'bg-[#F4F4F7] text-brand-blue' 
+                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue'
+                  }`}
+                >
+                  Power List
                 </Link>
                 
-                {/* Events Dropdown */}
+                {/* More Dropdown */}
                 <div>
                   <button
                     onClick={toggleEvents}
                     className={`w-full text-left py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 flex items-center justify-between ${
-                      isActive('/events') 
+                      isEventsOpen
                         ? 'bg-[#F4F4F7] text-brand-blue' 
-                        : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-'
+                        : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue'
                     }`}
                   >
-                    <span>Events</span>
+                    <span>More</span>
                     <svg 
                       className={`w-4 h-4 transition-transform duration-200 ${
                         isEventsOpen ? 'rotate-180' : ''
@@ -119,58 +155,46 @@ export default function MobileMenu() {
                   {isEventsOpen && (
                     <div className="ml-4 mt-2 space-y-1">
                       <Link 
-                        href="/events/conferences"
+                        href="/publications"
                         onClick={toggleMenu}
-                        className="block py-2 px-4 text-sm text-[#65676E] hover:text-"
+                        className="block py-2 px-4 text-sm text-[#65676E] hover:text-brand-blue"
                       >
-                        Conferences
+                        Digital Magazine
                       </Link>
                       <Link 
-                        href="/events/summits"
+                        href="/sectors/catering-fb"
                         onClick={toggleMenu}
-                        className="block py-2 px-4 text-sm text-[#65676E] hover:text-"
+                        className="block py-2 px-4 text-sm text-[#65676E] hover:text-brand-blue"
                       >
-                        Summits
+                        F & B
                       </Link>
                       <Link 
-                        href="/events/webinars"
+                        href="/contract-publishing"
                         onClick={toggleMenu}
-                        className="block py-2 px-4 text-sm text-[#65676E] hover:text-"
+                        className="block py-2 px-4 text-sm text-[#65676E] hover:text-brand-blue"
                       >
-                        Webinars
+                        Contract Publishing
                       </Link>
                     </div>
                   )}
                 </div>
-                
-                <Link 
-                  href="/contract-publishing"
-                  onClick={toggleMenu}
-                  className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive('/publishing') 
-                      ? 'bg-[#F4F4F7] text-brand-blue' 
-                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-'
-                  }`}
-                >
-                  Contract Publishing
-                </Link>
               </nav>
 
               {/* Footer */}
               <div className="p-6 border-t border-[#C9CACE] space-y-4">
                 <Link 
-                  href="/account"
+                  href="/my-account"
                   onClick={toggleMenu}
                   className={`block py-3 px-4 rounded-md text-sm font-medium transition-colors duration-200 ${
-                    isActive('/account') 
+                    isActive('/my-account') 
                       ? 'bg-[#F4F4F7] text-brand-blue' 
-                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-'
+                      : 'text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue'
                   }`}
                 >
                   MY ACCOUNT
                 </Link>
                 
-                <button className="w-full text-left py-3 px-4 rounded-md text-sm font-medium text-[#1E212A] hover:bg-[#F4F4F7] hover:text- transition-colors duration-200">
+                <button className="w-full text-left py-3 px-4 rounded-md text-sm font-medium text-[#1E212A] hover:bg-[#F4F4F7] hover:text-brand-blue transition-colors duration-200">
                   <div className="flex items-center space-x-2">
                     <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
