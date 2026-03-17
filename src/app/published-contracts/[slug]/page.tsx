@@ -1,14 +1,10 @@
 import { client } from '@/sanity/lib/client'
 import { getContractPublishingBySlug } from '@/sanity/lib/queries'
-import { PortableText } from '@/sanity/lib/portableText'
+import { PortableTextComponent } from '@/sanity/lib/portableText'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'Contract Publishing - Hotelier Africa',
-  description: 'Sponsored and partner content',
-}
 
 interface ContractPublishingDetailProps {
   params: { slug: string }
@@ -186,7 +182,7 @@ export default async function ContractPublishingDetailPage({ params }: ContractP
         {/* Body Content */}
         {content.body && (
           <div className="prose prose-lg max-w-none mb-16">
-            <PortableText value={content.body} />
+            <PortableTextComponent value={content.body} />
           </div>
         )}
 

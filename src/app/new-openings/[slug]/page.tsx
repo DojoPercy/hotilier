@@ -1,14 +1,10 @@
 import { client } from '@/sanity/lib/client'
 import { getNewOpeningBySlug } from '@/sanity/lib/queries'
-import { PortableText } from '@/sanity/lib/portableText'
+import { PortableTextComponent } from '@/sanity/lib/portableText'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
 
-export const metadata: Metadata = {
-  title: 'New Opening - Hotelier Africa',
-  description: 'Hotel and hospitality property opening details',
-}
 
 interface NewOpeningDetailProps {
   params: { slug: string }
@@ -176,7 +172,7 @@ export default async function NewOpeningDetailPage({ params }: NewOpeningDetailP
         {/* Body Content */}
         {opening.body && (
           <div className="prose prose-lg max-w-none mb-16">
-            <PortableText value={opening.body} />
+            <PortableTextComponent value={opening.body} />
           </div>
         )}
 

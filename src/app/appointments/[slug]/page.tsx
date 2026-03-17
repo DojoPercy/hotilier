@@ -1,14 +1,9 @@
 import { client } from '@/sanity/lib/client'
 import { getAppointmentBySlug } from '@/sanity/lib/queries'
-import { PortableText } from '@/sanity/lib/portableText'
+import { PortableTextComponent } from '@/sanity/lib/portableText'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Metadata } from 'next'
-
-export const metadata: Metadata = {
-  title: 'Appointment - Hotelier Africa',
-  description: 'Executive appointment details',
-}
 
 interface AppointmentDetailProps {
   params: { slug: string }
@@ -173,7 +168,7 @@ export default async function AppointmentDetailPage({ params }: AppointmentDetai
         {/* Body Content */}
         {appointment.body && (
           <div className="prose prose-lg max-w-none mb-16">
-            <PortableText value={appointment.body} />
+            <PortableTextComponent value={appointment.body} />
           </div>
         )}
 
