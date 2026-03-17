@@ -379,3 +379,175 @@ export const getPremiumContent = `*[_type in ["article", "interview"] && accessT
     slug
   }
 }`
+
+// Appointment queries
+export const appointmentFields = `
+  ${baseFields},
+  person-> {
+    _id,
+    name,
+    slug,
+    headshot,
+    bio,
+    role
+  },
+  position,
+  organization-> {
+    _id,
+    name,
+    logo,
+    website
+  },
+  previousPosition,
+  previousOrganization-> {
+    _id,
+    name
+  },
+  authors[]-> {
+    _id,
+    name,
+    slug,
+    headshot,
+    bio
+  },
+  sectors[]-> {
+    _id,
+    title,
+    slug,
+    icon
+  },
+  regions[]-> {
+    _id,
+    title,
+    slug
+  },
+  tags[]-> {
+    _id,
+    title,
+    slug
+  }
+`
+
+export const getAllAppointments = `*[_type == "appointment"] | order(publishedAt desc) {
+  ${appointmentFields}
+}`
+
+export const getAppointmentBySlug = `*[_type == "appointment" && slug.current == $slug][0] {
+  ${appointmentFields}
+}`
+
+export const getLatestAppointments = `*[_type == "appointment" && defined(publishedAt)] | order(publishedAt desc)[0...10] {
+  ${appointmentFields}
+}`
+
+// New Opening queries
+export const newOpeningFields = `
+  ${baseFields},
+  property-> {
+    _id,
+    name,
+    logo,
+    website
+  },
+  location,
+  region-> {
+    _id,
+    title,
+    slug
+  },
+  category,
+  investmentValue,
+  estimatedOpening,
+  authors[]-> {
+    _id,
+    name,
+    slug,
+    headshot,
+    bio
+  },
+  sectors[]-> {
+    _id,
+    title,
+    slug,
+    icon
+  },
+  regions[]-> {
+    _id,
+    title,
+    slug
+  },
+  tags[]-> {
+    _id,
+    title,
+    slug
+  }
+`
+
+export const getAllNewOpenings = `*[_type == "newOpening"] | order(publishedAt desc) {
+  ${newOpeningFields}
+}`
+
+export const getNewOpeningBySlug = `*[_type == "newOpening" && slug.current == $slug][0] {
+  ${newOpeningFields}
+}`
+
+export const getLatestNewOpenings = `*[_type == "newOpening" && defined(publishedAt)] | order(publishedAt desc)[0...10] {
+  ${newOpeningFields}
+}`
+
+// Contract Publishing queries
+export const contractPublishingFields = `
+  ${baseFields},
+  client-> {
+    _id,
+    name,
+    logo,
+    website
+  },
+  authors[]-> {
+    _id,
+    name,
+    slug,
+    headshot,
+    bio
+  },
+  sectors[]-> {
+    _id,
+    title,
+    slug,
+    icon
+  },
+  regions[]-> {
+    _id,
+    title,
+    slug
+  },
+  tags[]-> {
+    _id,
+    title,
+    slug
+  },
+  body,
+  pdf
+`
+
+export const getAllContractPublishing = `*[_type == "contractPublishing"] | order(publishedAt desc) {
+  ${contractPublishingFields}
+}`
+
+export const getContractPublishingBySlug = `*[_type == "contractPublishing" && slug.current == $slug][0] {
+  ${contractPublishingFields}
+}`
+
+export const getLatestContractPublishing = `*[_type == "contractPublishing" && defined(publishedAt)] | order(publishedAt desc)[0...10] {
+  ${contractPublishingFields}
+}`
+
+// Article Category queries
+export const getArticlesByCategory = `*[_type == "article" && category._ref == $categoryId] | order(publishedAt desc) {
+  ${articleFields}
+}`
+
+export const getLatestArticlesByCategory = `*[_type == "article" && category._ref == $categoryId && defined(publishedAt)] | order(publishedAt desc)[0...10] {
+  ${articleFields}
+}`

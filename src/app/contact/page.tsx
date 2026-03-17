@@ -66,8 +66,8 @@ export default function ContactPage() {
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Office Address</h3>
                   <p className="text-gray-700 leading-relaxed">
-                    Hotelier Africa Magazine<br />
-                    An initiative of Strategic Brand Focus Africa LTD
+                    58 Mansour Street, Parakuo Estates<br />
+                    Dome - Accra, Ghana - West Africa
                   </p>
                 </div>
               </div>
@@ -79,11 +79,24 @@ export default function ContactPage() {
                 <div className="ml-4">
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Email</h3>
                   <a 
-                    href="mailto:marcom@radcommgroup.com" 
+                    href="mailto:marcom@sbfafrica.com" 
                     className="text-brand-blue hover:text-vibrant-blue font-medium"
                   >
-                    marcom@radcommgroup.com
+                    marcom@sbfafrica.com
                   </a>
+                </div>
+              </div>
+
+              <div className="flex items-start">
+                <div className="flex-shrink-0">
+                  <PhoneIcon className="w-6 h-6 text-brand-blue" />
+                </div>
+                <div className="ml-4">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">Phone</h3>
+                  <p className="text-gray-700 leading-relaxed">
+                    <a href="tel:+233238454" className="text-brand-blue hover:text-vibrant-blue font-medium">+233 2384549</a><br />
+                    <a href="tel:+233505893884" className="text-brand-blue hover:text-vibrant-blue font-medium">+233 505893884</a>
+                  </p>
                 </div>
               </div>
             </div>

@@ -77,6 +77,29 @@ export const richBlock = defineType({
 // ==========
 // Taxonomies
 // ==========
+export const articleCategory = defineType({
+  name: 'articleCategory',
+  title: 'Article Category',
+  type: 'document',
+  fields: [
+    defineField({ name: 'title', type: 'string', validation: r => r.required() }),
+    defineField({ name: 'slug', type: 'slug', options: { source: 'title', maxLength: 96 }, validation: r => r.required() }),
+    defineField({ name: 'description', type: 'text' }),
+    defineField({ name: 'icon', title: 'Icon (emoji or short label)', type: 'string' }),
+  ]
+})
+
+export const ARTICLE_CATEGORIES = [
+  'News',
+  'Leadership',
+  'Analysis',
+  'Market Intelligence',
+  'Commentary',
+  'Roundtable',
+  'Destination Report',
+  'Investment Insight',
+] as const
+
 export const sector = defineType({
   name: 'sector',
   title: 'Sector',
@@ -91,19 +114,18 @@ export const sector = defineType({
 
 // Pre-seed sectors list (optional import data)
 export const SECTOR_SEED = [
-  'Agriculture',
-  'Diplomacy',
-  'Economy',
-  'Energy & Mining',
-  'Finance',
-  'Green Economy',
-  'Health & Education',
-  'Industry',
-  'Real Estate & Construction',
-  'Telecoms & IT',
+  'Hospitality',
   'Tourism',
-  'Transport',
-  'Sports',
+  'Catering & F&B',
+  'Leisure',
+  'Hotel Management',
+  'Travel & Transport',
+  'Accommodation',
+  'Events & Conferences',
+  'Destination Development',
+  'Investments & Development',
+  'Sustainability',
+  'Technology & Innovation',
 ] as const
 
 export const region = defineType({
@@ -239,6 +261,7 @@ export const article = defineType({
   type: 'document',
   fields: [
     ...baseContentFields,
+    defineField({ name: 'category', type: 'reference', to: [{ type: 'articleCategory' }], description: 'Article category (News, Leadership, Analysis, etc.)' }),
     defineField({ name: 'body', type: 'richBlock' }),
     defineField({ name: 'readingTime', type: 'number' }),
   ],
@@ -257,6 +280,39 @@ export const interview = defineType({
     defineField({ name: 'transcript', type: 'richBlock' }),
     defineField({ name: 'pullQuotes', type: 'array', of: [{ type: 'text' }] }),
   ],
+})
+
+export const appointment = defineType({
+  name: 'appointment',
+  title: 'Appointment',
+  type: 'document',
+  fields: [
+    ...baseContentFields,
+    defineField({ name: 'person', type: 'reference', to: [{ type: 'person' }], validation: r => r.required(), description: 'Person appointed' }),
+    defineField({ name: 'position', type: 'string', validation: r => r.required(), description: 'New position/role' }),
+    defineField({ name: 'organization', type: 'reference', to: [{ type: 'organization' }], validation: r => r.required() }),
+    defineField({ name: 'previousPosition', type: 'string', description: 'Previous position (if applicable)' }),
+    defineField({ name: 'previousOrganization', type: 'reference', to: [{ type: 'organization' }], description: 'Previous organization' }),
+    defineField({ name: 'body', type: 'richBlock', description: 'Details about the appointment' }),
+  ],
+  preview: { select: { title: 'person.name', subtitle: 'position', media: 'person.headshot' } },
+})
+
+export const newOpening = defineType({
+  name: 'newOpening',
+  title: 'New Opening',
+  type: 'document',
+  fields: [
+    ...baseContentFields,
+    defineField({ name: 'property', type: 'reference', to: [{ type: 'organization' }], validation: r => r.required(), description: 'Hotel/Property opening' }),
+    defineField({ name: 'location', type: 'string', validation: r => r.required(), description: 'Location/City' }),
+    defineField({ name: 'region', type: 'reference', to: [{ type: 'region' }], description: 'Region' }),
+    defineField({ name: 'category', type: 'string', options: { list: ['Luxury Hotel', 'Mid-Range Hotel', 'Budget Hotel', 'Resort', 'Boutique Hotel', 'Serviced Apartments', 'Casual Dining', 'Fine Dining', 'Other'] }, description: 'Property category' }),
+    defineField({ name: 'investmentValue', type: 'string', description: 'Investment value/cost estimate' }),
+    defineField({ name: 'estimatedOpening', type: 'string', description: 'Estimated opening date' }),
+    defineField({ name: 'body', type: 'richBlock', description: 'Details about the new opening' }),
+  ],
+  preview: { select: { title: 'property.name', subtitle: 'location', media: 'hero.image' } },
 })
 
 export const video = defineType({
@@ -281,6 +337,31 @@ export const press = defineType({
     defineField({ name: 'externalUrl', title: 'External URL', type: 'url' }),
     defineField({ name: 'body', type: 'richBlock' }),
   ],
+})
+
+export const contractPublishing = defineType({
+  name: 'contractPublishing',
+  title: 'Contract Publishing',
+  type: 'document',
+  fields: [
+    defineField({ name: 'title', type: 'string', validation: r => r.required() }),
+    defineField({ name: 'slug', type: 'slug', options: { source: 'title' }, validation: r => r.required() }),
+    defineField({ name: 'dek', title: 'Lead', type: 'text' }),
+    defineField({ name: 'hero', type: 'heroMedia' }),
+    defineField({ name: 'publishedAt', type: 'datetime' }),
+    defineField({ name: 'updatedAt', type: 'datetime' }),
+    defineField({ name: 'client', type: 'reference', to: [{ type: 'organization' }], description: 'Organization/Client' }),
+    defineField({ name: 'authors', type: 'array', of: [{ type: 'reference', to: [{ type: 'author' }] }] }),
+    defineField({ name: 'sectors', type: 'array', of: [{ type: 'reference', to: [{ type: 'sector' }] }] }),
+    defineField({ name: 'regions', type: 'array', of: [{ type: 'reference', to: [{ type: 'region' }] }] }),
+    defineField({ name: 'tags', type: 'array', of: [{ type: 'reference', to: [{ type: 'tag' }] }] }),
+    defineField({ name: 'body', type: 'richBlock', description: 'Contract publishing content' }),
+    defineField({ name: 'pdf', type: 'file', options: { accept: 'application/pdf' }, description: 'PDF version (optional)' }),
+    defineField({ name: 'seo', type: 'seo' }),
+    defineField({ name: 'isFeatured', title: 'Featured', type: 'boolean', initialValue: false }),
+    defineField({ name: 'accessType', type: 'accessType', initialValue: 'free' }),
+  ],
+  preview: { select: { title: 'title', subtitle: 'client.name', media: 'hero.image' } },
 })
 
 export const powerList = defineType({
@@ -399,9 +480,12 @@ export const savedItem = defineType({
       to: [
         { type: 'article' },
         { type: 'interview' },
+        { type: 'appointment' },
+        { type: 'newOpening' },
         { type: 'event' },
         { type: 'video' },
         { type: 'press' },
+        { type: 'contractPublishing' },
         { type: 'powerList' },
         { type: 'publication' },
       ],
@@ -437,11 +521,11 @@ export default [
   // Shared
   seo, heroMedia, richBlock,
   // Taxonomies
-  sector, region, tag,
+  articleCategory, sector, region, tag,
   // Entities
   organization, person, author, partner,
   // Content
-  article, interview, video, press, powerList, powerListCategory, publication, event,
+  article, interview, appointment, newOpening, video, press, contractPublishing, powerList, powerListCategory, publication, event,
   // AI Features
   aiSummary,
   // Advertising

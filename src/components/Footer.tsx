@@ -101,10 +101,10 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <Link
-                  href="/"
+                  href="/about"
                   className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
                 >
-                  Home
+                  About
                 </Link>
               </li>
               <li>
@@ -112,39 +112,15 @@ const Footer = () => {
                   href="/about"
                   className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
                 >
-                  About Us
+                  About us
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/articles"
+                  href="/advertise"
                   className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
                 >
-                  Articles
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/interviews"
-                  className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
-                >
-                  Interviews
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/events"
-                  className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
-                >
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/publications"
-                  className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
-                >
-                  Publications
+                  Advertising
                 </Link>
               </li>
               <li>
@@ -153,6 +129,30 @@ const Footer = () => {
                   className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
                 >
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
+                >
+                  Privacy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/ethics-policy"
+                  className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
+                >
+                  Ethics Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/media-kit"
+                  className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
+                >
+                  Media Kit
                 </Link>
               </li>
             </ul>
@@ -233,8 +233,9 @@ const Footer = () => {
                 </svg>
                 <div>
                   <p className="text-gray-300 text-sm font-medium">Hotelier Africa Magazine</p>
-                  <p className="text-gray-400 text-sm">
-                    An initiative of Strategic Brand Focus Africa LTD
+                  <p className="text-gray-400 text-xs">
+                    58 Mansour Street, Parakuo Estates<br />
+                    Dome - Accra, Ghana - West Africa
                   </p>
                 </div>
               </div>
@@ -255,10 +256,10 @@ const Footer = () => {
                 </svg>
                 <div>
                   <a
-                    href="mailto:marcom@radcommgroup.com"
+                    href="mailto:marcom@sbfafrica.com"
                     className="text-gray-300 hover:text-brand-blue transition-colors duration-200 text-sm"
                   >
-                    marcom@radcommgroup.com
+                    marcom@sbfafrica.com
                   </a>
                 </div>
               </div>
@@ -283,16 +284,10 @@ const Footer = () => {
                 Privacy Policy
               </Link>
               <Link
-                href="/terms-of-service"
+                href="/ethics-policy"
                 className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
               >
-                Terms of Service
-              </Link>
-              <Link
-                href="/cookie-policy"
-                className="text-gray-400 hover:text-brand-blue transition-colors duration-200"
-              >
-                Cookie Policy
+                Ethics Policy
               </Link>
             </div>
           </div>
